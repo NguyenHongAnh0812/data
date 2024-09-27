@@ -4,12 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "server": "json-server db.json -m ./node_modules/json-server-auth --port 8000 ",
     "start": "node index.js",
+    "dev": "concurrently \"npm run server\" \"npm run start\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "concurrently": "^9.0.1",
     "json-server": "^0.17.4",
     "json-server-auth": "^2.1.0"
   }
